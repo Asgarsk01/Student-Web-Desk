@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+body{
+    margin: 0px;
+    background-size: cover;
+    text-decoration: none;
+}
+
+#body_container{
+    margin: 0px;
+    height: 100%;
+    text-decoration: none;
+
+}
+
+.header {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 4px solid rgb(215, 244, 230);
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.menu_icon{
+
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #6e77ee;
+}
+
+.logo_box {
+    margin-left: 20px;
+    margin-right: 350px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo_box img {
+    padding: 0px;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    left: 5em;
+    text-decoration: none;
+    
+}
+
+#web_app_name {
+    position: relative;
+    margin: 8px 0px 0px 5px;
+    padding: 0px;
+    font-size: 25px;
+    font-family: 'poppins';
+    font-weight: bold;
+    left: 50px;
+    text-decoration: none;
+}
+.row
+{
+    position: relative;
+    top: 5em;
+    justify-content: center;
+    align-items: center;
+}
+
+h3
+{
+    position: relative;
+    bottom: 3em;
+    font-family: 'poppins';
+
+}
+
+.btn
+{
+    position: relative;
+    top: 12px;
+    color: whitesmoke;
+    background-color: #6e77ee;
+    opacity: 1.7;
+    border-color: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    /* font-weight: bold; */
+}
+
+.menu_icon div{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+
+}
+
+.menu_bar {
+    position: relative;
+    margin-top: 8px;
+    right: 7em;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu_bar h2 {
+    display: inline;
+    margin-right: 22px;
+    font-family: 'poppins';
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: none;
+}
+
+.text-right 
+{
+    position: relative;
+    bottom: 6em;
+}
+
+.table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 3px solid black;
+    font-family: 'poppins';
+}
+
+.table td
+{
+    font-family: 'poppins';
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.menu_bar h3:hover{
+    /* text-decoration: underline; */
+    border-bottom: 3px solid black;
+}
+
+#menu_calendar{
+    border-bottom: 3px solid black;
+}
+
+.content_pane {
+    margin: auto;
+    margin-top: 90px;
+    width: 100%;
+    height: 100%;
+    font-family: 'poppins';
+    font-weight: bold;
+    display: flex;
+}
+
+
+.left_panel{
+    object-fit: contain;
+    margin-left: auto;
+    margin-right:auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 40%;
+    height: 50vh;
+    background-color: rgb(85,208,156);
+    border: 1px solid black;
+    box-shadow: 4px 6px lightgray;
+}
+
+.left_panel input{
+
+    width: 100%;
+}
+
+.strike {
+    text-decoration: line-through;
+  }
+  
+td{
+    width: 150px;
+    max-width: 150px;
+    object-fit: contain;
+    /*
+    border: 1px solid white;
+    background-color: lightgray;
+    */
+    padding: 5px;
+  }
+
+.left_panel h2{
+
+    border-bottom: 3px solid black;
+}
+
+.right_panel{
+    object-fit: contain;
+    margin-left: auto;
+    margin-right:auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: fit-content;
+    background-color: rgb(85,208,156);
+    border: 1px solid black;
+    box-shadow: 4px 6px lightgray;
+}
+
+.right_panel h2{
+
+    border-bottom: 3px solid black;
+}
+
+
+.page_image{
+    width: 95%;
+    height: 87%;
+
+    background-color: aliceblue; /* can remove this - it's just for visualization */
+}
+
+.margins {
+    margin-top: 50px;
+}
+
+.padding {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.bg-image {
+    background-image: url("../Dashboard/content images/calendar.jpg");
+    background-size: cover;
+    background-position: top;
+    margin-top: 0px;
+    width: 100%;
+    min-height: 600px;
+  }
+  .modal-header
+  {
+    font-family: 'poppins';
+  }
+  .event-class
+  {
+    font-family: 'poppins';
+    font-size: 26px;
+  }
+  .text-rightt
+  {
+    position: relative;
+    left: 2em;
+  }
+
+@media screen and (min-width: 320px) {
+   
+
+}

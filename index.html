@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Main_Login_Page</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="main login.css">
+                
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+       
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">          -->
+    </head>
+    <body>
+        <!-- <h1 class="logo">Student Web Desk</h1> New logo heading -->
+        <section class="container forms">
+            <h1 class="logo">Get organized with Student </br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Web Desk
+                </h1> <!-- New logo heading -->
+            <div class="form login" id="modal">
+                <div class="form-content">
+                    <header>Login</header>
+                    <form onsubmit="login(event)" autocomplete="off">
+                        <div class="field input-field">
+                            <input type="email" id="loginEmail" placeholder="Email" class="input" required>
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" id="loginPassword" placeholder="Password" class="password" required>
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Login</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <!-- <a href="#" class="field google"> -->
+                        <img src="img/google (1).png" alt="" class="google-img">
+                        <button class="bmtn" onclick="loginWithGoogle()" id='login'>Login with Google</button>
+                        <!-- <span>Login with Google</span> -->
+                    <!-- </a> -->
+                </div>
+
+            </div>
+
+            <!-- Signup Form -->
+
+            <div class="form signup" id="modal">
+                <div class="form-content">
+                    <header>Signup</header>
+                    <form onsubmit="signup(event)" autocomplete="off">
+                        <div class="field input-field">
+                            <input type="email" id="signupEmail" placeholder="Email" class="input">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" id="signupPassword" placeholder="Create password" class="password">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Confirm password" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Signup</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+
+
+                <div class="media-options">
+                    <!-- <a href="#" class="field google"> -->
+                        <img src="img/google (1).png" alt="" class="google-img">
+                        <button class="bmtn" onclick="loginWithGoogle()" id='login'>Login with Google</button>
+                        <!-- <span>Login with Google</span> -->
+                    <!-- </a> -->
+                </div>
+
+
+            </div>
+        </section>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+            
+            <script>
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyDf4F8zc_3nuc7bs4kr4a8H2T8rw2JnoWs",
+              authDomain: "login-auth-5572b.firebaseapp.com",
+              projectId: "login-auth-5572b",
+              storageBucket: "login-auth-5572b.appspot.com",
+              messagingSenderId: "749296468280",
+              appId: "1:749296468280:web:a6a4075780271bb12741cd"
+            };
+            
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            
+        </script>
+         <!-- JavaScript -->
+         <script src="./scripts/script.js"></script>
+         <script src="./scripts/auth.js"></script>
+          <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>

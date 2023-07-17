@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    height: 93vh;
+    width: 98%;
+    background: url(/img/newtabbkg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#body_container{
+    margin: 0px;
+    height: 100%;
+
+}
+
+.header{
+    
+    border-bottom: 4px solid rgb(215,244,230);
+    padding-bottom: 5px;
+    font-size: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo_box{
+    position: relative;
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    align-items:center; /* vertical align*/
+    right: 40em;
+
+}
+
+.btn
+{
+    position: relative;
+    top: 20px;
+    right: 5em;
+    color: whitesmoke;
+    background-color: #6e77ee;
+    opacity: 1.7;
+    border-color: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-weight: bold;
+}
+.greeting_and_buttons button{
+   position: relative;
+   color: whitesmoke;
+    background-color: #007bff;
+    opacity: 1.7;
+    border-color: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.get-started
+{
+    position: relative;
+    left: 2.5em;
+    bottom: 0.5em;
+}
+.logo_box img{
+    /* margin: 8px 0px 0px 0px; */
+    padding: 0px;
+    width: 75px;
+    height: 75px;
+}
+
+#web_app_name{
+    margin: 8px 0px 0px 5px;
+    padding: 0px;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #6e77ee;
+}
+
+/* #logo{
+
+} */
+
+
+.menu_icon{
+    float: right;
+    margin-right: 50px;
+
+    cursor: pointer;
+    position: relative;
+    bottom: 45px;
+}
+
+.menu_icon div{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+
+}
+
+.content_pane{
+    position: relative;
+    margin: auto;
+    margin-top: 70px;
+    /* border: 1px solid red;*/
+    border-radius: 20px;
+    padding: 40px 70px 30px 70px;
+    width: fit-content;
+    background-color: #a7b9c4;
+    font-family: 'Fira Code';
+    font-weight: bold;
+    left: 25em;
+    
+}
+
+.date_and_time{
+    margin: auto;
+    width: fit-content;
+
+    text-align: center;
+}
+
+.date_and_time h3{
+    margin-top: 0px;
+    font-size: 30px;
+}
+
+.date_and_time h1{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 125px;
+}
+
+.greeting_and_buttons{
+    margin: auto ;
+    margin-top: 0px;
+    width: fit-content;
+    font-size: 30px;
+    text-align: center;
+}
+
+.greeting_and_buttons h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.greeting_and_buttons button{
+    margin-top: 10px;
+    border-radius: 25px;
+    border-style: solid;
+    width: 130px;
+    height: 45px;
+
+    font-size: 14px;
+    font-family: 'poppins';
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 320px) {
+   
+
+}
+
+#current_time {
+    margin-top: 10px;
+    font-family: 'poppins';
+    font-weight: bold;
+    font-size: 50px;
+    color: #bc666d;
+}
+
+#current_date {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'poppins';
+    color: #bc666d;
+}
+
+#current_greeting {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'poppins';
+    color: #3a3134;
+}

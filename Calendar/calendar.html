@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="a description">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Student Web Desk</title>
+    <!-- title bar icon -->
+    <link rel="icon" href="/img/[removal.ai]_tmp-64a00a7b54359.png" type="image/icon type">
+
+    <!-- Font Awesome Icon-->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- auth -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+        
+        <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDf4F8zc_3nuc7bs4kr4a8H2T8rw2JnoWs",
+          authDomain: "login-auth-5572b.firebaseapp.com",
+          projectId: "login-auth-5572b",
+          storageBucket: "login-auth-5572b.appspot.com",
+          messagingSenderId: "749296468280",
+          appId: "1:749296468280:web:a6a4075780271bb12741cd"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+    </script>
+     <!-- JavaScript -->
+     <script src="auth1.js"></script>
+</head>
+
+<body>
+    <div id="body_container">
+        <div class="header">
+            <a href="../NewTab/newtab.html">
+                <div class="logo_box">
+                    <img src="/img/[removal.ai]_tmp-64a00a7b54359.png" id="logo">
+                    <h1 id="web_app_name">Student Web Desk</h1>
+                </div>
+            </a>
+
+            <div class="menu_bar">
+                <a href="../Dashboard/dashboard.html">
+                    <h2 id="menu_dashboard">Dashboard</h2>
+                </a>
+                <h2 id="menu_calendar">Calendar</h2>
+                <a href="../ToDo/todo.html">
+                    <h2 id="menu_todo">To-Do</h2>
+                </a>
+                <a href="../Study/study.html">
+                    <h2 id="menu_study">Test Marks</h2>
+                </a>
+                <!-- <a href="../Widgets/widgets.html">
+                    <h2 id="menu_widgets">Widgets</h2>
+                </a> -->
+                <a href="../Notes/notes.html">
+                    <h2 id="menu_notes">Sticky Notes</h2>
+                </a>
+            </div>
+
+            <!-- user card -->
+            <!-- <div id="userCard" class="card bg-light"
+                style="display: none; position: relative; right: 10%; top: 0px; text-align: center; padding: 5px; height: 40px;">
+                <div id="userIcon">
+                    <i style="font-size: 24px; color: rgb(85,208,156);" class='fas fa-user-astronaut'></i>
+                    <span style="font-size: 16px;" id="userInfoEmail"></span>
+                </div>
+
+            </div> -->
+
+            <!--logout button-->
+            <div id="logoutButton" style="position: absolute; right: 4%; top: 20px;">
+                <button onclick="logout()" class="btn btn-primary">Logout</button>
+            </div>
+
+        </div>
+
+        <div class="container-fluid padding margins">
+            <div class="row">
+
+                <div class="col-sm-8">
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h3>Calendar Events</h3>
+                        </div>
+
+                        <!-- Button triggers add event modal -->
+                        <div class="col-sm-4">
+                            <div class="text-right">
+                                <button id="addEventButton" type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#addEventModal">
+                                    Add event
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="table table-hover" id="eventTable">
+                        <tr>
+                            <th scope="col">Ended</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">
+                                <select id="categoryFilter">
+                                </select>
+                            </th>
+                            <th scope="col">Discard</th>
+                        </tr>
+                    </table>
+
+                </div>
+
+
+
+
+                <!-- add event modal -->
+                <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog"
+                    aria-labelledby="addEventModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addEventModalTitle">Add a new Calendar Event</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <!-- heading-->
+                                        <h2 class="event-class">Add event</h2>
+                                        <hr>
+
+                                        <!-- Event Description-->
+                                        <div class="form-group form-check">
+                                            <label for="eventTitle">Event Title</label>
+                                            <input type="text" class="form-control" id="eventTitle"
+                                                placeholder="Enter event title">
+                                        </div>
+                                        <!-- Category -->
+                                        <div class="form-group form-check">
+                                            <label for="eventCategory">Category</label>
+                                            <input type="text" class="form-control" id="eventCategory"
+                                                placeholder="Enter category" list="categoryList">
+                                            <datalist class="form-select" id="categoryList">
+                                                <option value="Personal"></option>
+                                                <option value="Work"></option>
+                                            </datalist>
+                                        </div>
+
+                                        <!-- Date -->
+                                        <div class="form-group form-check">
+                                            <label for="dateInput">Date</label>
+                                            <input type="date" class="form-control" id="dateInput">
+                                        </div>
+
+                                        <!-- Time -->
+                                        <div class="form-group form-check">
+                                            <label for="timeInput">Time</label>
+                                            <input type="time" class="form-control" id="timeInput">
+                                        </div>
+
+                                        <div class="text-rightt">
+                                            <button id="addBtn" class="btn btn-primary">Add</button>
+                                            <button id="sortBtn" class="btn btn-secondary">Sort</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right panel -->
+                <!-- <div class="col-sm-4">
+                    <div class="bg-image">
+
+                    </div>
+
+                    Coming soon -->
+                </div>
+            </div>
+
+            <!-- alert info modal -->
+            <div class="modal fade" id="alertInfoModal" tabindex="-1" role="dialog"
+                aria-labelledby="alertInfoModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="alertInfoModalTitle">Session ended</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="alert alert-info" role="alert">
+                                You have been logged out. Please login!
+                                <small id="alt" class="form-text text-muted">You will be redirected in few seconds. <a
+                                        href="../index.html">Click here</a> to get started now.</small>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="calender.js"></script>
+
+        <!-- BootStrap -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

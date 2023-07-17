@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+body{
+    margin: 0px;
+    /*background-image: url(background.png);*/
+    background-size: cover;
+}
+
+#body_container{
+    margin: 0px;
+    height: 100%;
+
+}
+
+.header {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 4px solid rgb(215, 244, 230);
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 10px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #6e77ee;
+}
+
+.logo_box {
+  margin-left: 20px;
+  margin-right: 350px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo_box img {
+  padding: 0px;
+  width: 75px;
+  height: 75px;
+  position: relative;
+  left: 5em;
+  text-decoration: none;
+  
+}
+
+#web_app_name {
+  position: relative;
+  margin: 8px 0px 0px 5px;
+  padding: 0px;
+  font-size: 25px;
+  font-family: 'poppins';
+  font-weight: bold;
+  left: 50px;
+  text-decoration: none;
+}
+
+.btn
+{
+  position: relative;
+  top: 5px;
+  font-family: 'poppins';
+  color: whitesmoke;
+  background-color: #6e77ee;
+  opacity: 1.7;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 30px;
+  font-weight: bold;
+}
+
+.menu_icon {
+  margin-right: 50px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 660px;
+  left: 1450px;
+  text-decoration: none;
+}
+
+.menu_icon div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  text-decoration: none;
+}
+
+.menu_bar {
+  position: relative;
+  margin-top: 8px;
+  right: 7em;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu_bar h3 {
+  display: inline;
+  margin-right: 22px;
+  font-family: 'poppins';
+  font-size: 18px;
+  cursor: pointer;
+  text-transform: none;
+}
+
+.menu_bar h3:hover{
+    /* text-decoration: underline; */
+    border-bottom: 3px solid black;
+}
+
+@media screen and (min-width: 320px) {
+   }
+
+/* to do list styling */
+
+/* body {
+    font-family: Arial, sans-serif;
+  } */
+  
+  .container {
+    position: relative;
+    font-family: 'poppins';
+    top: 8em;
+    /* margin: 20px auto; */
+    max-width: 800px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 2px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  textarea {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    /* padding: 5px; */
+  }
+  .first-sr
+  {
+    position: relative;
+    width:15%;
+    padding: 10px;
+  }
+  .sbj
+  {
+    position: relative;
+    width: 35%;
+  }
+  .tst
+  {
+    position: relative;
+    width: 10%;
+  }
+  

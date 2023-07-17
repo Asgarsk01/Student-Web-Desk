@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fruit Order Form</title>
+  <script>
+    function calculateTotal() {
+      var appleCheckbox = document.getElementById("apple");
+      var orangeCheckbox = document.getElementById("orange");
+      var bananaCheckbox = document.getElementById("banana");
+
+      var totalCost = 0;
+
+      if (appleCheckbox.checked) {
+        totalCost += 0.59;
+      }
+
+      if (orangeCheckbox.checked) {
+        totalCost += 0.49;
+      }
+
+      if (bananaCheckbox.checked) {
+        totalCost += 0.39;
+      }
+
+      var totalCostWithTax = totalCost * 1.05; // Add 5% sales tax
+
+      alert("Your total cost is " + totalCostWithTax.toFixed(2));
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <h2>Fruit Order Form</h2>
+  <form onsubmit="return calculateTotal()">
+    <label>
+      <input type="checkbox" id="apple"> Apple ($0.59 each)
+    </label><br>
+    
+    <label>
+      <input type="checkbox" id="orange"> Orange ($0.49 each)
+    </label><br>
+    
+    <label>
+      <input type="checkbox" id="banana"> Banana ($0.39 each)
+    </label><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
